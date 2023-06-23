@@ -14,7 +14,7 @@ and the PeopleSoft Tools jar (psjoa.jar) that provides the connectivity componen
 PeopleTools Process Scheduler. 
 
 
-![PeopleSoft Component Overview](/img/peoplesoft-component-overview.png)
+![PeopleSoft Component Overview](../static/img/peoplesoft-component-overview.png)
 
 The job definitions entered within the SMA OpCon environment, indicate which PeopleSoft batch process defined within the PeopleTools 
 Process Scheduler to either start or monitor. 
