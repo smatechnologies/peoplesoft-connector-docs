@@ -1,12 +1,16 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'SMA Technologies Help',
-  tagline: 'SMA PeopleSoft Conector',
+  tagline: 'SMA PeopleSoft Connector',
   url: 'https://help.smatechnologies.com',
   baseUrl: '/opcon/connectors/peoplesoft/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   organizationName: 'smatechnologies',
   projectName: 'peoplesoft-connector-docs',
   themeConfig: {
@@ -16,6 +20,11 @@ module.exports = {
         alt: 'SMA Technologies Help Logo',
         src: 'img/logo.svg',
         href: 'https://help.smatechnologies.com',
+      },
+    },
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true,
       },
     },
     footer: {
@@ -28,7 +37,7 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          breadcrumbs: false,
+          breadcrumbs: true,
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
@@ -44,11 +53,14 @@ module.exports = {
       },
     ],
   ],
-  plugins: [
+  themes: [
     [
-      require.resolve('@cmfcmf/docusaurus-search-local'), 
+      require.resolve('@easyops-cn/docusaurus-search-local'),
       {
-      }
+        hashed: true,
+        indexBlog: false,
+        docsRouteBasePath: '/',
+      },
     ],
   ],
 };

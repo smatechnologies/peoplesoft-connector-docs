@@ -1,29 +1,51 @@
 ---
 slug: '/'
 sidebar_label: 'PeopleSoft Connector'
+hide_table_of_contents: true
+displayed_sidebar: null
 ---
 
 # SMA PeopleSoft Connector
 
-The PeopleSoft Connector can be used to Start or Monitor running batch jobs within the PeopleTools Process Scheduler. 
-The connector interacts with the Process Scheduler to start or monitor running PeopleSoft batch processes.  
+The PeopleSoft Connector is an SMA OpCon component that starts and monitors PeopleSoft batch processes through the PeopleTools Process Scheduler.
 
-The SMA OpCon PeopleSoft Connector consists of a Windows batch program that is executed by the Windows Agent. It includes a Java 
-library SMA_Component_Interfaces.jar developed within the PeopleSoft environment that provides access to the PeopleSoft Process Table 
-and the PeopleSoft Tools jar (psjoa.jar) that provides the connectivity components allowing the connector to communicate with the 
-PeopleTools Process Scheduler. 
+<div style={{display: 'flex', gap: '0.75rem', alignItems: 'flex-start', flexWrap: 'wrap', marginTop: '1rem'}}>
 
+<div style={{flex: '1', minWidth: '160px', display: 'flex', flexDirection: 'column', gap: '0.6rem'}}>
 
-![PeopleSoft Component Overview](../static/img/peoplesoft-component-overview.png)
+<div style={{background: 'var(--ifm-card-background-color)', border: '1px solid var(--ifm-color-emphasis-400)', borderRadius: '10px', padding: '0.75rem 1rem'}}>
 
-The job definitions entered within the SMA OpCon environment, indicate which PeopleSoft batch process defined within the PeopleTools 
-Process Scheduler to either start or monitor. 
+### Overview
 
-The job definitions are entered as Windows jobs using the PeopleSoft job sub-type. When the job is scheduled by OpCon, the job definitions 
-are passed as arguments to the PeopleSoft Connector.
+- [Overview](./overview.md)
+- [Release notes](./release-notes.md)
 
-During the job processing, if configured the status of the PeopleSoft job can be displayed in the OpCon List view.
+</div>
 
-The connector returns the PeopleSoft batch process completion code to OpCon where it can be used to determine if the process completed successfully.
+</div>
 
----
+<div style={{flex: '1', minWidth: '160px', display: 'flex', flexDirection: 'column', gap: '0.6rem'}}>
+
+<div style={{background: 'var(--ifm-card-background-color)', border: '1px solid var(--ifm-color-emphasis-400)', borderRadius: '10px', padding: '0.75rem 1rem'}}>
+
+### Installation
+
+- [Installation](./installation.md)
+
+</div>
+
+</div>
+
+<div style={{flex: '1', minWidth: '160px', display: 'flex', flexDirection: 'column', gap: '0.6rem'}}>
+
+<div style={{background: 'var(--ifm-card-background-color)', border: '1px solid var(--ifm-color-emphasis-400)', borderRadius: '10px', padding: '0.75rem 1rem'}}>
+
+### Operation
+
+- [Operation](./operation.md)
+
+</div>
+
+</div>
+
+</div>
