@@ -14,7 +14,7 @@ tags:
 
 The PeopleSoft Connector is an SMA OpCon component that starts and monitors PeopleSoft batch processes through the PeopleTools Process Scheduler. The connector lets you schedule and track existing PeopleSoft jobs from OpCon without creating new job definitions in the PeopleSoft database.
 
-The SMA OpCon PeopleSoft Connector consists of a Windows batch program that runs under the Windows Agent. It includes a Java library (`SMA_Component_Interfaces.jar`) developed within the PeopleSoft environment that provides access to the PeopleSoft Process Table, and the PeopleSoft Tools jar (`psjoa.jar`) that provides the connectivity components allowing the connector to communicate with the PeopleTools Process Scheduler.
+The SMA OpCon PeopleSoft Connector is a Java program that runs under the Windows Agent, using the Java runtime supplied in the installation package. It includes a Java library (`SMA_Component_Interfaces.jar`) developed within the PeopleSoft environment that provides access to the PeopleSoft Process Table, and the PeopleSoft Tools jar (`psjoa.jar`) that provides the connectivity components allowing the connector to communicate with the PeopleTools Process Scheduler.
 
 ![PeopleSoft Component Overview](../static/img/peoplesoft-component-overview.png)
 

@@ -68,7 +68,6 @@ To install the PeopleSoft Connector, complete the following steps:
    | `Connector.config` | The connector configuration file (you edit this in Step 4). |
    | `emplugins\` | Contains the PeopleSoft job sub-type plug-in for Enterprise Manager. |
    | `java\` | The embedded Java runtime (OpenJDK 11) used by the connector. |
-   | `log\` | Where connector log files are written. |
 
 ## Step 3 — Register the job sub-type in Enterprise Manager
 
@@ -122,10 +121,10 @@ PORT=
 
 | Setting | What it does | Default | Notes |
 |---|---|---|---|
-| `APPLICATION_TYPE` | Identifies the application type for the connector. | — | Required value is `PSFT`. |
+| `APPLICATION_TYPE` | A label the connector writes to its own log output. It has no effect on behaviour. | — | Leave it set to `PSFT` as supplied. |
 | `SEND_STATUS_MESSAGE` | When enabled, the current status of the job running within PeopleSoft is displayed in the OpCon job information. | `False` | Values are `True` or `False`. |
 | `WINDOWS_AGENT_DIRECTORY` | Path to the Windows Agent. Used by the `SMAStatus` program to submit PeopleSoft job status changes to OpCon for display in the operations environment. | — | Required when `SEND_STATUS_MESSAGE` is `True`. |
-| `DEBUG` | Turns tracing on in the PeopleSoft Connector to assist with fault diagnosis. | `False` | Values are `True` or `False`. |
+| `DEBUG` | Turns tracing on in the PeopleSoft Connector to assist with fault diagnosis. | — | Values are `True` or `False`. Required — the connector fails to load its configuration if this setting is absent, so set it to `False` rather than removing it. |
 
 :::caution
 The backslash (`\`) is a special Java character. When you set `WINDOWS_AGENT_DIRECTORY`, enter each backslash twice. For example, write `C:\\Program Files\\SMA Technologies\\OpCon\\Agent` instead of `C:\Program Files\SMA Technologies\OpCon\Agent`.
@@ -142,7 +141,7 @@ The backslash (`\`) is a special Java character. When you set `WINDOWS_AGENT_DIR
 
 After the four steps are complete, confirm the connector is ready:
 
-- The connector installation directory contains `SMAPSConnector.exe`, `Connector.config`, and the `emplugins`, `java`, and `log` sub-directories.
+- The connector installation directory contains `SMAPSConnector.exe`, `Connector.config`, and the `emplugins` and `java` sub-directories. The connector creates the `log` directory itself the first time it runs, so it is not present before then.
 - The **PeopleSoft** job sub-type appears under the Windows job type in Enterprise Manager.
 - The OpCon global property **PeopleSoftPath** exists and points at the installation directory.
 - `Connector.config` has values set for `APPLICATION_TYPE`, `[PEOPLESOFT] ADDRESS`, and `[PEOPLESOFT] PORT`.
