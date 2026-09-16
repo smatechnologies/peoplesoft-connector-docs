@@ -1,4 +1,10 @@
 ---
+title: PeopleSoft Connector
+description: "Start and monitor PeopleSoft batch processes from OpCon through the PeopleTools Process Scheduler: installation, configuration, and operation reference."
+tags:
+  - Conceptual
+  - System Administrator
+  - PeopleSoft Connector
 slug: '/'
 sidebar_label: 'PeopleSoft Connector'
 hide_table_of_contents: true
